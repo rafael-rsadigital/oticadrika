@@ -1,6 +1,6 @@
-# Ótica Drika — site institucional
+# Ótica Drika
 
-Landing page responsiva em React, Vite e TypeScript, com identidade visual da ótica, animações leves, SEO local e integração com WhatsApp e Google Maps.
+Site institucional de página única desenvolvido com Astro, React e TypeScript.
 
 ## Desenvolvimento
 
@@ -13,8 +13,7 @@ npm run dev
 
 ```bash
 npm run build
+npm run preview
 ```
 
-## Deploy na Vercel
-
-Importe este repositório na Vercel. O projeto usa Vite, comando `npm run build` e diretório de saída `dist`. Cada push na branch `main` gera um novo deploy.
+Deploy na Vercel com saída estática em `dist/`.
