@@ -1,4 +1,5 @@
 import { useState, type ReactNode } from 'react';
+import type { Variants } from 'framer-motion';
 import { motion } from 'framer-motion';
 import { ArrowDown, ArrowRight, ArrowUpRight, Clock3, Eye, Glasses, MapPin, Menu, MessageCircle, Phone, Sun, X } from 'lucide-react';
 
@@ -6,7 +7,7 @@ const phone = '5513997309976';
 const whatsapp = `https://wa.me/${phone}?text=${encodeURIComponent('Olá! Gostaria de saber mais sobre os produtos da Ótica Drika.')}`;
 const mapLink = 'https://www.google.com/maps/search/?api=1&query=Ótica+Drika+Rua+Maria+Geralda+Valadão+06+Guarujá+SP';
 const mapEmbed = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3840.18145236407!2d-46.21080502465714!3d-23.975936978517517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d2015ca5d26983%3A0xd0cc9ca147b29467!2s%C3%93tica%20Drika!5e1!3m2!1spt-BR!2sbr';
-const reveal = { hidden: { opacity: 0, y: 22 }, visible: { opacity: 1, y: 0, transition: { duration: .58, ease: [0.22,1,0.36,1] } } };
+const reveal: Variants = { hidden: { opacity: 0, y: 22 }, visible: { opacity: 1, y: 0, transition: { duration: .58, ease: [0.22, 1, 0.36, 1] } } };
 function Reveal({ children, delay = 0, className = '' }: { children: ReactNode; delay?: number; className?: string }) {
   return <motion.div className={className} variants={reveal} initial="hidden" whileInView="visible" viewport={{ once: true, amount: .14 }} transition={{ delay }}>{children}</motion.div>;
 }
